@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "homepage": "https://NarihitoM.github.io/",
+  "homepage": "https://NarihitoM.github.io/malanai/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@azure-rest/ai-inference": "^1.0.0-beta.6",
