@@ -7,19 +7,19 @@
 *
 {
      font-family: 'Montserrat', serif;
-         scrollbar-width: none;
+    scrollbar-width: none;
 
 }
 .chat-window {
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
-    height: 80vh;
+    height: 90vh;
     border: 1px solid #ccc;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     scrollbar-width: none;
 }
 
@@ -283,7 +283,8 @@ body.dragging *:not(.drag-overlay) { pointer-events: none; }
 
 /* Responsive for <=760px */
 @media (max-width: 760px) {
-    .chat-window { width: 95%; height: 90vh; }
+    .chat-window { width: 95%; height: 80vh; }
+    .h1{ font-size: 19px;}
     .input-area { width: 90%; gap: 5px; margin: 0 auto; padding: 20px; }
     .input, .input1 { width: 200px; font-size: 14px; padding: 5px 10px; }
     .upload-btn { width: 35px; height: 35px; }
