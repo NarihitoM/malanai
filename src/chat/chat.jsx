@@ -312,7 +312,7 @@ function Chat() {
           <div className="row1">
             <h1 className="copyright">@Copyright 2025 MaLan-AI</h1>
             <div className="input-area">
-              {!isLoggedin ? (
+              {isLoggedin ? (
                 <>
                   <label className="checkbox">
                     <input type="checkbox" checked={createfile} onChange={(e) => setcreatefile(e.target.checked)} />
