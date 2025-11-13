@@ -1,5 +1,5 @@
 /* Base Styles */
-.h1 {
+.h1chat {
     margin-left: 20px;
     font-family: 'Montserrat', serif;
     font-size: 28px;
@@ -10,6 +10,7 @@
     scrollbar-width: none;
 
 }
+
 .chat-window {
     display: flex;
     flex-direction: column;
@@ -37,6 +38,8 @@
 .input-area {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
     width: 100%;
 }
@@ -49,9 +52,9 @@
 }
 
 .input, .input1 {
-    flex: 1;
+     flex: 1;
     height: 40px;
-    padding: 5px 15px;
+    padding: 15px 15px;
     border: 1px solid rgb(46, 46, 46);
     border-radius: 50px;
     background-color: #fff;
@@ -139,6 +142,7 @@
     background-color: #ffffff;
     border-radius: 10px;
     max-width: 50%;
+    font-size: 15px;
     border: 1px solid rgb(182, 182, 182);
 }
 
@@ -149,6 +153,7 @@
     border-radius: 10px;
     max-width: 70%;
     align-self: flex-end;
+     font-size: 15px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     border: 1px solid rgb(182, 182, 182);
@@ -171,7 +176,7 @@
 }
 
 .gotologinpage, .gotosignpage {
-    padding: 10px;
+    padding: 8px;
     background-color: #000;
     color: white;
     border: none;
@@ -284,12 +289,12 @@ body.dragging *:not(.drag-overlay) { pointer-events: none; }
 /* Responsive for <=760px */
 @media (max-width: 760px) {
     .chat-window { width: 95%; height: 80vh; }
-    .h1{ font-size: 19px;}
+    .h1chat{ font-size: 20px;}
     .input-area { width: 90%; gap: 5px; margin: 0 auto; padding: 20px; }
     .input, .input1 { width: 200px; font-size: 14px; padding: 5px 10px; }
     .upload-btn { width: 35px; height: 35px; }
     .button, .button1 { width: 20%; height: 40px; }
     .row1 { gap: 10px; }
     .drop-zone { padding: 40px 20px; font-size: 1rem; }
-    .h1 { font-size: 15px; }
+   
 }
