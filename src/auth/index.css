@@ -36,14 +36,14 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.input {
+.input4 {
   padding: 10px;
   border-radius: 10px;
   box-sizing: border-box;
   margin-top: 10px;
 }
 
-.input:focus {
+.input4:focus {
   outline: none;
 }
 

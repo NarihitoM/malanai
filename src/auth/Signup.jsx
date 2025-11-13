@@ -111,11 +111,11 @@ function Signup() {
           <h1 className="h1">MaLan-Ai</h1>
           <h2 className="h1">Sign Up</h2>
 
-          <input type="text" className="input" value={email} style={email === "" ? { border: "2px solid gray" } : { border: "2px solid " + (emailRegex.test(email) ? "green" : "red") }} onChange={(e) => setemail(e.target.value)} placeholder="Enter Email" />
+          <input type="text" className="input4" value={email} style={email === "" ? { border: "2px solid gray" } : { border: "2px solid " + (emailRegex.test(email) ? "green" : "red") }} onChange={(e) => setemail(e.target.value)} placeholder="Enter Email" />
 
-          <input type="password" className="input" value={password} style={{ border: password === "" ? "2px solid gray" : password === confirmpassword ? "2px solid green" : "2px solid red" }} onChange={(e) => setpassword(e.target.value)} placeholder="Enter Password" />
+          <input type="password" className="input4" value={password} style={{ border: password === "" ? "2px solid gray" : password === confirmpassword ? "2px solid green" : "2px solid red" }} onChange={(e) => setpassword(e.target.value)} placeholder="Enter Password" />
 
-          <input type="password" className="input" value={confirmpassword} style={{ border: confirmpassword === "" ? "2px solid gray" : password === confirmpassword ? "2px solid green" : "2px solid red" }} onChange={(e) => setconfirmpassword(e.target.value)} placeholder="Enter Confirm Password"
+          <input type="password" className="input4" value={confirmpassword} style={{ border: confirmpassword === "" ? "2px solid gray" : password === confirmpassword ? "2px solid green" : "2px solid red" }} onChange={(e) => setconfirmpassword(e.target.value)} placeholder="Enter Confirm Password"
           />
           {bool && (<p className="p" style={{ color: text === "Account Successfully Created" || text === "Google Login Successful" ? "green" : "red" }} >{text}</p>)}
           <div className="row4"><input type="checkbox" value={context} onChange={(e) => setcontext(e.target.checked)} /><h3>I agree to <span class="terms" onClick={() => setshowterms(true)} >Terms and conditions</span></h3>
