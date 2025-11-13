@@ -37,7 +37,7 @@ function Chat() {
     }
   }, [isLoggedin, name]);
 
-  // Fetch previous chat on login
+ 
   useEffect(() => {
     const fetchPreviousMessages = async () => {
       if (!userid) return;
@@ -97,7 +97,7 @@ function Chat() {
     stopTypingRef.current = false;
     setIsLoading(true);
 
-    // Show user's message immediately
+   
     const userMessageObj = {
       sender: "user",
       text: userInput,
@@ -105,7 +105,7 @@ function Chat() {
     };
     setmessagetext(prev => [...prev, userMessageObj]);
 
-    // Save user message to DB
+  
     try {
       await axios.post("https://malan-ai-db.vercel.app/api/chat", {
         id: userid,
@@ -147,7 +147,7 @@ function Chat() {
 
       const contentType = resp.headers.get("Content-Type");
 
-      // File response
+      
       if (contentType && contentType.includes("text/plain")) {
         const blob = await resp.blob();
         const fileName =
@@ -173,7 +173,7 @@ function Chat() {
         return;
       }
 
-      // Normal bot text reply
+    
       const data = await resp.json();
       const botReply = data.reply || "No response from server";
 
@@ -183,7 +183,7 @@ function Chat() {
 
       setmessagetext(prev => [...prev, { sender: "Bot", text: "" }]);
 
-      // Bot typing animation
+    
       typewritingRef.current = setInterval(() => {
         if (stopTypingRef.current) {
           clearInterval(typewritingRef.current);
@@ -206,7 +206,7 @@ function Chat() {
           setistyping(false);
 
           const botMessageObj = { sender: "Bot", text: botReply };
-          // Save bot message to DB
+       
           axios.post("https://malan-ai-db.vercel.app/api/chat", {
             id: userid,
             userchatmessage: [botMessageObj],
@@ -226,7 +226,7 @@ function Chat() {
     }
   };
 
-  // Drag & Drop
+  
   useEffect(() => {
     const handleDragEnter = (e) => { e.preventDefault(); e.stopPropagation(); dragCounter.current++; setIsDragging(true); };
     const handleDragLeave = (e) => { e.preventDefault(); e.stopPropagation(); dragCounter.current--; if (dragCounter.current === 0) setIsDragging(false); };
@@ -245,7 +245,7 @@ function Chat() {
     };
   }, []);
 
-  // Auto scroll
+  
   useEffect(() => {
     const container = fovmessage.current?.parentElement;
     if (!container) return;
