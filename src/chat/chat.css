@@ -1,87 +1,80 @@
-.h1
-{
+/* Base Styles */
+.h1 {
     margin-left: 20px;
-    font-family: 'Montserrat',serif;
+    font-family: 'Montserrat', serif;
+    font-size: 28px;
 }
-
-.chat-window
+*
 {
+     font-family: 'Montserrat', serif;
+}
+.chat-window {
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
     margin-left: auto;
+    margin-right: auto;
     height: 80vh;
     border: 1px solid #ccc;
     width: 100%;
+    max-width: 1200px;
 }
-.head
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
-.loginpage
-{
-  align-self: center;
+
+.loginpage {
+    align-self: center;
 }
+
 .input-area {
-    position: relative;      
-    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
 }
 
 .input-row {
-    position: relative;
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    gap: 10px;
 }
-.input {
-    width: 100%;            
+
+.input, .input1 {
+    flex: 1;
     height: 40px;
-    padding: 5px 90px 5px 15px; 
+    padding: 5px 15px;
     border: 1px solid rgb(46, 46, 46);
     border-radius: 50px;
     background-color: #fff;
-    box-sizing: border-box;    
     font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
+    box-sizing: border-box;
 }
-.input1 {
-    width: 100%;            
-    height: 40px;
-    padding: 5px 90px 5px 15px; 
-    border: 1px solid rgb(46, 46, 46);
-    border-radius: 50px;
-    background-color: #fff;
-    box-sizing: border-box;    
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-}
+
 .upload-btn {
-    position: absolute;
-    right: 75px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border: none;
     border-radius: 50%;
-    background: transparent;
+    background-color: black;
+    color: white;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
 }
-.upload-btn:hover
-{
+
+.upload-btn:hover {
     background-color: gray;
 }
+
 .files-container {
     display: flex;
     flex-wrap: wrap;
@@ -89,303 +82,191 @@
     margin-top: 4px;
 }
 
-.filename 
-{
-    margin: 0;
-    padding: 4px 8px;
-    background: #f0f0f0;
-    border-radius: 4px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-}
-.filename1
-{
+.filename, .filename1 {
     margin: 0;
     padding: 4px 8px;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     gap: 4px;
-    background: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
 }
-.button {
-    position: absolute;
-    right: 10px;             
-    top: 50%;
-    transform: translateY(-50%); 
-    height: 30px;
+
+.filename { background: #f0f0f0; }
+.filename1 { background: #fff; }
+
+.button, .button1 {
+    height: 35px;
     padding: 0 15px;
     border: none;
     border-radius: 20px;
-    background-color: #000000;
+    background-color: #000;
     color: white;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-.button1
-{
-    position: absolute;
-    right: 100px;             
-    top: 50%;
-    transform: translateY(-50%); 
-    height: 30px;
-    padding: 0 10px;
-    border: none;
-    border-radius: 20px;
-    background-color: #000000;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    align-self: center;
-}
-.label
-{
-    position: absolute;
-    left: 10px;             
-    top: -50%;
-    right: -50%;
-}
-.button1:hover
-{
-    background-color: gray;
-    color: #fff;
-    opacity: 0.8;
-}
-.button1:hover:not(:disabled)
-{
-    background-color: gray;
-    color: #fff;
-    opacity: 0.8;
-}
-.button1:disabled
-{
-    opacity: 0.5;
-    cursor: not-allowed;
-    transition: all 0.2s ease-in-out;
-}
-.button:hover:not(:disabled) {
+
+.button:hover:not(:disabled),
+.button1:hover:not(:disabled) {
     background-color: gray;
     color: #fff;
     opacity: 0.8;
 }
 
-.button:disabled {
+.button:disabled,
+.button1:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    transition: all 0.2s ease-in-out;
 }
 
-.messages
-{
+.messages {
     flex: 1;
     overflow-y: auto;
     padding: 10px;
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
-    scrollbar-width: none;
 }
-.messages p
-{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-}
-.chatmessage
-{
-    text-align: left;
-    margin: 10px;
+
+.chatmessage {
+    margin: 10px 0;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
-    display: inline-block;
     max-width: 50%;
     border: 1px solid rgb(182, 182, 182);
-   
 }
-.usermessage
-{
-    text-align: left;
-    margin: 10px;
+
+.usermessage {
+    margin: 10px 0;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
-    align-self: end;
     max-width: 70%;
-    justify-content: end;
+    align-self: flex-end;
     word-wrap: break-word;
     overflow-wrap: break-word;
     border: 1px solid rgb(182, 182, 182);
 }
-.row
-{
+
+.row, .row3, .row4 {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    flex-direction: row;
+    align-items: center;
 }
-.row1
-{
+
+.row1 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 50px;
-    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
 }
-.gotologinpage
-{
-    align-self: center;
+
+.gotologinpage, .gotosignpage {
     padding: 10px;
-    margin-right: 10px;
-    background-color: #000000;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 10px;
     transition: all 0.2s ease-in-out;
+    margin-left: 10px;
 }
-.gotologinpage:hover
-{
+
+.gotologinpage:hover, .gotosignpage:hover {
     background-color: gray;
-    transition: all 0.2s ease-in-out;
 }
-.gotosignpage
-{
-    align-self: center;
-    padding: 10px;
-    margin-right: 10px;
-     background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    transition: all 0.2s ease-in-out;
-}
-.gotosignpage:hover
-{
-    background-color: gray;
-    transition: all 0.2s ease-in-out;
-}
-.copyright
-{
+
+.copyright, .warning {
     font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat',serif;
-    margin-left: 20px;
-    align-self: center;
-}
-.warning
-{
-    font-size: 15px;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Montserrat',serif;
-    margin-right: 20px;
+    font-family: 'Montserrat', serif;
     text-align: center;
 }
-.circle
-{
+
+.circle {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     border: 3px solid #ffffff;
-    border-top: 3px solid black ;
+    border-top: 3px solid black;
     animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-.row3
-{
-    position: relative;
-    flex-direction: column;
-}
-.row4
-{
-    display: flex;
-    flex-direction: row;
-}
-.deletebutton
-{
+
+.deletebutton {
     background-color: black;
     border: none;
     border-radius: 50%;
     color: white;
-    width:20px;
+    width: 20px;
     height: 20px;
-    align-self: center;
-    margin-left: -10px;
+    cursor: pointer;
 }
-.deletebutton:hover
-{
-    background-color: gray;
+
+.deletebutton:hover { background-color: gray; }
+
+.checkbox {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
 }
-.checkbox
-{
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-}
+
 .drag-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  pointer-events: all;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: all;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .drop-zone {
-  background: white;
-  border: 3px dashed #000000;
-  border-radius: 15px;
-  padding: 60px 100px;
-  text-align: center;
-  font-size: 1.2rem;
-  color: #000000;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
+    background: white;
+    border: 3px dashed #000;
+    border-radius: 15px;
+    padding: 60px 100px;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
 }
 
 .drop-zone p {
-  margin: 0;
-  font-weight: bold;
+    margin: 0;
+    font-weight: bold;
 }
 
-body.dragging *:not(.drag-overlay) {
-  pointer-events: none;
-}
+body.dragging *:not(.drag-overlay) { pointer-events: none; }
+
 .bot-typing {
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
-  font-style: italic;
-  color: gray;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-style: italic;
+    color: gray;
 }
 
 .typing-dots span {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin: 0 2px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 50%;
-  animation: blink 1.4s infinite both;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    background-color: black;
+    border-radius: 50%;
+    animation: blink 1.4s infinite both;
 }
 
 .typing-dots span:nth-child(1) { animation-delay: 0s; }
@@ -393,67 +274,18 @@ body.dragging *:not(.drag-overlay) {
 .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
 
 @keyframes blink {
-  0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
-  40% { transform: scale(1); opacity: 1; }
+    0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+    40% { transform: scale(1); opacity: 1; }
 }
+
+/* Responsive for <=760px */
 @media (max-width: 760px) {
-    .input-area {
-        gap: 5px;
-        width: 80%; /* Adjust to fit small screens */
-        margin: 0 auto; /* Center the input area */
-    }
-
-    .input, .input1 {
-        width: 100%;            
-        height: 40px;
-        padding: 5px 50px 5px 15px; 
-        font-size: 14px;
-    }
-    .input-row
-    {
-        gap: 20px;
-    }
-    .button {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        width: 70px;
-        margin-top: 5px;
-    }
-    .upload-btn
-    {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        width: 40px;
-        margin-top: 5px;
-    }
-    .row1 {
-        font-size: 12px;
-        gap: 10px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .chat-window {
-        height: 80vh; /* Slightly smaller for mobile */
-        width: 95%;
-        margin: 0 auto;
-    }
-
-    .messages {
-        padding: 5px;
-    }
-
-    .filename, .filename1 {
-        font-size: 14px;
-    }
-
-    .drop-zone {
-        padding: 40px 20px;
-        font-size: 1rem;
-    }
+    .chat-window { width: 95%; height: 90vh; }
+    .input-area { width: 90%; gap: 5px; margin: 0 auto; padding: 20px; }
+    .input, .input1 { width: 200px; font-size: 14px; padding: 5px 10px; }
+    .upload-btn { width: 35px; height: 35px; }
+    .button, .button1 { width: 20%; height: 40px; }
+    .row1 { gap: 10px; }
+    .drop-zone { padding: 40px 20px; font-size: 1rem; }
+    .h1 { font-size: 22px; }
 }
