@@ -21,8 +21,16 @@ function Signup() {
       settext("Please fill in all the fields");
     } else if (!emailRegex.test(email)) {
       settext("Please Enter a valid email");
-    } else if (password !== confirmpassword) {
-      settext("Password is incorrect");
+    }
+    else if (password.length < 6 && password !== "") {
+         settext("Password must be greater than 6 characters");
+    }
+    else if (confirmpassword.length < 6 && confirmpassword !== "") {
+         settext("Password must be greater than 6 characters");
+    }
+
+    else if (password !== confirmpassword) {
+      settext("Password do not match");
     }
     else if (!context) {
       settext("Please check terms and conditions");
@@ -97,8 +105,15 @@ function Signup() {
     }
     else if (!emailRegex.test(email)) {
       settext("Please Enter a valid email");
-    } else if (password !== confirmpassword && confirmpassword !== "") {
-      settext("Password is incorrect");
+    }
+    else if (password.length < 6 && password !== "") {
+         settext("Password must be greater than 6 characters");
+    }
+    else if (confirmpassword.length < 6 && confirmpassword !== "") {
+         settext("Password must be greater than 6 characters");
+    }
+    else if (password !== confirmpassword && confirmpassword !== "") {
+      settext("Password do not match");
     } else {
       settext("");
     }
@@ -113,9 +128,9 @@ function Signup() {
 
           <input type="text" className="input4" value={email} style={email === "" ? { border: "2px solid gray" } : { border: "2px solid " + (emailRegex.test(email) ? "green" : "red") }} onChange={(e) => setemail(e.target.value)} placeholder="Enter Email" />
 
-          <input type="password" className="input4" value={password} style={{ border: password === "" ? "2px solid gray" : password === confirmpassword ? "2px solid green" : "2px solid red" }} onChange={(e) => setpassword(e.target.value)} placeholder="Enter Password" />
+          <input type="password" className="input4" value={password} style={{ border: password === "" ? "2px solid gray" : (password === confirmpassword && password.length >= 6) ? "2px solid green" : "2px solid red" }} onChange={(e) => setpassword(e.target.value)} placeholder="Enter Password" />
 
-          <input type="password" className="input4" value={confirmpassword} style={{ border: confirmpassword === "" ? "2px solid gray" : password === confirmpassword ? "2px solid green" : "2px solid red" }} onChange={(e) => setconfirmpassword(e.target.value)} placeholder="Enter Confirm Password"
+          <input type="password" className="input4" value={confirmpassword} style={{ border: confirmpassword === "" ? "2px solid gray" : (password === confirmpassword && confirmpassword.length >= 6 ) ? "2px solid green" : "2px solid red" }} onChange={(e) => setconfirmpassword(e.target.value)} placeholder="Enter Confirm Password"
           />
           {bool && (<p className="p" style={{ color: text === "Account Successfully Created" || text === "Google Login Successful" ? "green" : "red" }} >{text}</p>)}
           <div className="row4"><input type="checkbox" value={context} onChange={(e) => setcontext(e.target.checked)} /><h3>I agree to <span class="terms" onClick={() => setshowterms(true)} >Terms and conditions</span></h3>

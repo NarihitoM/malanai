@@ -293,7 +293,7 @@ body.dragging *:not(.drag-overlay) { pointer-events: none; }
     .input-area { width: 90%; gap: 5px; margin: 0 auto; padding: 20px; }
     .input, .input1 { width: 200px; font-size: 14px; padding: 5px 10px; }
     .upload-btn { width: 35px; height: 35px; }
-    .button, .button1 { width: 20%; height: 40px; }
+    .button, .button1 { width: 100px; height: 40px; }
     .row1 { gap: 10px; }
     .drop-zone { padding: 40px 20px; font-size: 1rem; }
 }
